@@ -1,0 +1,1 @@
+var VK_CLONE = {};
