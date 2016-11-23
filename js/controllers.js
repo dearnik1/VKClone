@@ -6,5 +6,13 @@ VK_CLONE.controllers = {
 		} else {
 			message.text("Please, sing in.");
 		}
+	},
+	friends: function() {
+	    var message = $("#friends");
+        if (VK_CLONE.user) {
+            message.text(VK_CLONE.user.getFriends());
+        } else {
+       			message.text("Please, sing in.");
+       		}
 	}
 };

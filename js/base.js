@@ -26,6 +26,7 @@ $(document).ready(
 			VK.Auth.login(function(response) {
 				if(response.status == "connected") {
 					VK_CLONE.user = new User(response.session.user);
+					//VK_CLONE.friends = new Friends(response.session.user);
 					toggleSignButtons();
 					goHome();
 				}
@@ -54,13 +55,13 @@ $(document).ready(
 
 
 function loadCentralPage(url, controllerName) {
-	if (url != null && url != "") {
-		$("article").load(url, function() {
-			if (controllerName != null && controllerName != "") {
-				VK_CLONE.controllers[controllerName]();
-			}
-		});
-	}
-}
+ 	if (url != null && url != "") {
+ 		$("article").load(url, function() {
+ 			if (controllerName != null && controllerName != "") {
+ 				VK_CLONE.controllers[controllerName]();
+ 			}
+ 		});
+ 	}
+ }
 
 
